@@ -1,4 +1,6 @@
-﻿namespace LinqEtSeedEF.Models
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+
+namespace LinqEtSeedEF.Models
 {
     public class Client
     {
@@ -6,6 +8,7 @@
         public string Nom { get; set; }
         public string Adresse { get; set; }
         public string Telephone { get; set; }
+        [ValidateNever]
         public List<Commande> Commandes { get; set; }
     }
 }

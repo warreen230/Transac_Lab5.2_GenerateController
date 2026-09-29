@@ -1,4 +1,6 @@
-﻿namespace LinqEtSeedEF.Models
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+
+namespace LinqEtSeedEF.Models
 {
     public class Plat
     {
@@ -9,7 +11,9 @@
         public int? NiveauPiquant { get; set; }
         public int RestaurantId { get; set; }
         public bool Vegetarien {  get; set; }
+        [ValidateNever]
         public Restaurant Restaurant { get; set; }
+        [ValidateNever]
         public List<CommandePlat> CommandesPlats { get; set; }
     }
 }
