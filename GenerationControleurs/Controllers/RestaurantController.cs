@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LinqEtSeedEF.Models;
 
-public class RestaurantsController : Controller
+public class RestaurantController : Controller
 {
     private readonly GenerationControleursContext _context;
 
-    public RestaurantsController(GenerationControleursContext context)
+    public RestaurantController(GenerationControleursContext context)
     {
         _context = context;
     }
